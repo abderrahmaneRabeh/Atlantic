@@ -1,0 +1,49 @@
+/* @font-face {
+    font-family: ;
+    src: url();
+} */
+
+/* html defer ref='preload/prefetch' */
+
+/* mimeType :  */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  @font-face {
+    font-family: "CharM";
+    src: url("../fonts/CharM.ttf") format("truetype");
+  }
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+header {
+  background: url("../img/image.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+nav.flex {
+  justify-content: space-between;
+  padding-inline: 5%;
+  padding-block: 1.3rem;
+  background-image: linear-gradient(#c4c4c4 80%, #03131f 0%);
+  & a {
+    text-decoration: none;
+    color: #f3e2ba;
+    margin-inline: 1rem;
+    font-size: 1.2rem;
+  }
+
+  & span {
+    color: #f3e2ba;
+  }
+}
