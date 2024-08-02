@@ -7,43 +7,388 @@
 
 /* mimeType :  */
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+
+@font-face {
+  font-family: "Archeologicaps";
+  src: url("../font/Archeologicaps.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Charlemagne Std";
+  src: url("../font/Charlemagne\ Std\ Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Gotham";
+  src: url("../font/Gotham-Light.otf") format("opentype");
+}
+
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
-  @font-face {
-    font-family: "CharM";
-    src: url("../fonts/CharM.ttf") format("truetype");
-  }
 }
 
 .flex {
   display: flex;
   align-items: center;
 }
-header {
+.Top-Img {
   background: url("../img/image.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
 }
+
 nav.flex {
   justify-content: space-between;
   padding-inline: 5%;
   padding-block: 1.3rem;
-  background-image: linear-gradient(#c4c4c4 80%, #03131f 0%);
-  & a {
+  border-bottom: 2px solid #f3e2ba;
+
+  background: linear-gradient(
+      180deg,
+      rgba(196, 196, 196, 0) 1472.75%,
+      rgba(3, 19, 31, 0.8) 1724.19%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(3, 19, 31, 0.8) 0%,
+      rgba(196, 196, 196, 0) 287.37%
+    );
+
+  & a,
+  i {
     text-decoration: none;
     color: #f3e2ba;
     margin-inline: 1rem;
     font-size: 1.2rem;
   }
 
+  & i {
+    border: 3px solid #f3e2ba;
+    border-radius: 50%;
+    padding: 5px;
+  }
+  & a {
+    font-family: "Charlemagne Std";
+  }
+
   & span {
     color: #f3e2ba;
+    font-family: "Charlemagne Std";
+  }
+}
+
+section.centent {
+  position: relative;
+  right: 50%;
+  transform: translateX(50%);
+  text-align: center;
+  display: grid;
+  gap: 1rem;
+  margin-top: 55px;
+
+  & .text {
+    color: rgba(243, 226, 186, 1);
+    font-family: "Archeologicaps";
+  }
+  & h1 {
+    font-size: 97px;
+    font-weight: 500;
+  }
+  & h3 {
+    font-size: 37.79px;
+    font-weight: 500;
+  }
+}
+
+section.image-cards {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+
+  & .Image-content {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    width: 30%;
+  }
+
+  & img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  & p {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: rgba(243, 226, 186, 1);
+    font-size: 14px;
+    font-family: "Gotham", sans-serif;
+    background: rgba(0, 0, 0, 0.368);
+    padding: 5px;
+    box-sizing: border-box;
+  }
+}
+
+section.pays {
+  text-align: center;
+
+  & button {
+    border: 2px solid rgba(243, 226, 186, 1);
+    color: rgba(243, 226, 186, 1);
+    font-family: "Gotham", sans-serif;
+    padding: 1rem;
+    background: transparent;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: 0.3s;
+  }
+
+  & button:hover {
+    cursor: pointer;
+    scale: 0.9;
+  }
+}
+
+main.flex {
+  padding: 1rem;
+
+  & div.container {
+    width: 50%;
+    height: 100%;
+  }
+
+  & h3 {
+    font-family: "Charlemagne Std";
+    font-size: 24px;
+    font-weight: 700;
+    color: rgba(243, 226, 186, 1);
+  }
+  & .specialText {
+    color: #fff;
+    font-weight: bold;
+  }
+
+  & p {
+    color: rgba(229, 229, 229, 1);
+    font-family: "Gotham";
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-block: 1.5rem;
+  }
+  & button {
+    border: 2px solid rgba(243, 226, 186, 1);
+    color: rgba(243, 226, 186, 1);
+    font-family: "Gotham", sans-serif;
+    padding: 1rem;
+    background: transparent;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: 0.3s;
+  }
+
+  & button:hover {
+    cursor: pointer;
+    scale: 0.9;
+  }
+  & div.video {
+    width: 50%;
+    height: max-content;
+    padding: 2rem;
+  }
+
+  & div.video img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+section.Actualites {
+  background: url("../img/bg1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 600px;
+  background-attachment: fixed;
+  box-shadow: inset 6px 20px 20px 9px rgba(21, 21, 21, 0.584),
+    inset 0px -20px 17px 20px rgba(21, 21, 21, 0.584);
+
+  & h3 {
+    font-family: "Archeologicaps";
+    padding-block: 2rem;
+    text-align: center;
+    font-size: 38px;
+    font-weight: 700;
+    color: rgba(243, 226, 186, 1);
+  }
+  & .card {
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+  }
+  & img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  & .wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  & p {
+    color: rgba(243, 226, 186, 1);
+    font-family: "Gotham", sans-serif;
+    font-size: 14px;
+    margin: 10px 0 0 0;
+    position: relative;
+  }
+  & h4 {
+    font-family: "Charlemagne Std";
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    color: rgba(243, 226, 186, 1);
+  }
+}
+
+footer section.footerStyle {
+  & span,
+  p {
+    font-family: "Charlemagne Std";
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    color: #fff;
+  }
+
+  & span {
+    color: rgba(243, 226, 186, 1);
+  }
+
+  & .social-links {
+    display: flex;
+    gap: 20px;
+    color: #fff;
+    font-size: 20px;
+    margin-top: 1rem;
+  }
+}
+
+section.sendEmail {
+  padding: 20px;
+  & .flex {
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  & p {
+    color: rgba(243, 226, 186, 1);
+    font-family: "roboto";
+    font-size: 18px;
+    margin: 0;
+  }
+  & form {
+    display: flex;
+    align-items: center;
+  }
+  & input {
+    height: 40px;
+    padding: 0 10px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #333;
+    font-size: 16px;
+    border-radius: 5px 0 0 5px;
+    font-family: "Gotham", sans-serif;
+  }
+  & input::placeholder {
+    color: #bbb;
+  }
+  & button {
+    height: 40px;
+    border: none;
+    background: #d8b18f;
+    padding: 0 20px;
+    color: rgba(243, 226, 186, 1);
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  & button i {
+    font-size: 18px;
+  }
+  & .wrappInput {
+    display: flex;
+    border: 15px solid rgba(28, 28, 28, 1);
+  }
+}
+
+section.lastElement {
+  & p {
+    color: #fff;
+    font-family: "Gotham", sans-serif;
+    font-size: 14px;
+    margin: 0;
+  }
+}
+
+@media (width < 950px) {
+  nav.flex {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding-block: 5px;
+    & a,
+    i {
+      margin-inline: 0.5rem;
+      font-size: 0.8rem;
+    }
+  }
+  section.centent {
+    & h1 {
+      font-size: 50px;
+    }
+    & h3 {
+      font-size: 20px;
+    }
+  }
+
+  section.image-cards {
+    & p {
+      font-size: 9px;
+    }
+  }
+}
+@media (width < 600px) {
+  nav.flex {
+    flex-direction: row-reverse;
+    & .links {
+      display: none;
+    }
+  }
+  section.image-cards {
+    & p {
+      font-size: 6px;
+    }
   }
 }
